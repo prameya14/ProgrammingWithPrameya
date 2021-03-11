@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/prism.css">
+    <script src="/prism.js"></script>
+    <title>Project 1</title>
+    <style>
+        .Button-Next {
+            background-color: rgb(149, 149, 221);
+        }
+    </style>
+</head>
+
+<body bgcolor=#add8e6>
+    <header class="text-gray-700 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>
+            <span class="ml-3 text-xl">ProgrammingWithPrameya</span>
+          </a>
+          <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+            <a href="/index.html" class="mr-5 hover:text-gray-900">Home</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdu4P3K43N0MKTB3zKeb8CfzugCLcExTFWzj5EFrPaEIUOEaQ/viewform?usp=sf_link">Contact Me &nbsp;&nbsp;&nbsp;</a>
+            <a href="videos.html"class="mr-5 hover:text-gray-900"> Browse Video Tutorials</a>
+          </nav>
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </button>
+        </div>
+      </header>
+    <div>
+        <iframe width="1350" height="620" src="https://www.youtube.com/embed/b4du20PB-8c" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+    </div><br><hr>
+
+        <font size="7"><strong><p align="Middle">Python Project 1</p></strong></font>
+        <strong><font size="6"><h5>Simple Calculator</h5></font></strong>
+        <font size="5"><p><strong>Statement: </strong>Make a simple Calculator using Python Programming which can perform Addition, Subtraction, Multiplication and devision.</p>
+        </font>
+        <font color="Red" size="5"><u>Note: No Python Packages should be used!!!</u></font><br><br>
+        <font size="5">To download source code and other material click on the button given below!</font>
+
+        <div>
+            <a href="https://drive.google.com/drive/u/2/folders/1Sc554Efvhw9HmjhS_P4tpawtYtwDlvVo"><button
+                    class="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Materials</button></a>
+        </div><br>
+
+        <hr>
+
+
+    <font size="6">
+        <b>Source Code shown in the video</b>
+    </font>
+    <font size="5">
+        <pre class="language-python"><code>
+    
+# Programme Topic: Simple Calculator
+
+num_1 = int(input("Number 1\n"))
+num_2 = int(input("Number 2\n"))
+ope = input("Operator\n")
+
+if ope == "+":
+    result = num_1 + num_2
+elif ope == "-":
+    result = num_1 - num_2
+elif ope == "*":
+    result = num_1 * num_2
+elif ope == "/":
+    result = num_1 / num_2
+else:
+    print("Error: Operator Not Found!")
+
+print(f"Result: {result}")
+
+        </code></pre></font>
+    
+
+    <div>
+        <a><button
+                class="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Next</button></a>
+    </div>
+</body>
+
+</html>
