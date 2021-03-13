@@ -1,0 +1,86 @@
+<!-- Video 3 Page -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/ProgrammingWithPrameya/prism.css">
+    <script src="/ProgrammingWithPrameya/prism.js"></script>
+    <title>Project 4</title>
+    <style>
+        .Button-Next {
+            background-color: rgb(149, 149, 221);
+        }
+    </style>
+</head>
+
+<body bgcolor=#add8e6>
+    <header class="text-gray-700 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+                <span class="ml-3 text-xl">ProgrammingWithPrameya</span>
+            </a>
+            <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+                <a href="/ProgrammingWithPrameya/index.html" class="mr-5 hover:text-gray-900"><strong>Home</strong></a>
+                <a
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSdu4P3K43N0MKTB3zKeb8CfzugCLcExTFWzj5EFrPaEIUOEaQ/viewform?usp=sf_link"><strong>Contact
+                        Me &nbsp;&nbsp;&nbsp;</strong></a>
+                <a href="/ProgrammingWithPrameya/videos.html" class="mr-5 hover:text-gray-900"><strong>Browse Video Tutorials</strong></a>
+            </nav>
+            </button>
+        </div>
+    </header>
+    <div>
+        <iframe width="1350" height="620" src="https://www.youtube.com/embed/Rmp_TBSUSGs" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+    </div><br>
+    <hr>
+
+    <font size="7"><strong>
+            <p align="Middle">Python Project 4</p>
+        </strong></font>
+    <strong>
+        <font size="6">
+            <h5>Google Search using Python</h5>
+        </font>
+    </strong>
+    <font size="5">
+        <p><strong>Statement: </strong>We will write a Python Program which is capable of performing a Google Search for us!</p>
+    </font>
+    <font color="Red" size="5"><u>Note: Python Packages can be used!</u></font><br><br>
+    <font size="5">To download source code and other material click on the button given below!</font>
+
+    <div>
+        <a href="https://drive.google.com/drive/folders/1mbklbIRHgZakhammAMmq6TR5cuekO6FM?usp=sharing"><button
+                class="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Materials</button></a>
+    </div><br>
+
+    <hr>
+
+
+    <font size="6">
+        <b>Source Code shown in the video</b>
+    </font>
+    <font size="5">
+        <pre class="language-python"><code>
+import webbrowser
+
+query = input("Enter what you want to search in google\n")
+url = "https://www.google.com/search?q=" + query
+webbrowser.open(url)
+        </code></pre>
+    </font>
+
+
+    <div>
+        <a><button
+                class="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Next</button></a>
+    </div>
+</body>
+
+</html>
