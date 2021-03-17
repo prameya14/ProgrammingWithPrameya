@@ -81,7 +81,7 @@ def speak(audio): # --> Our main function
     engine = pyttsx3.init("sapi5")
     voices = engine.getProperty("voices")
     engine.setProperty("voice", voices[0].id) # --> Male Voice for Windows
-    # engine.setProperty("voice", voices[0].id) # --> Female Voice for Windows
+    # engine.setProperty("voice", voices[1].id) # --> Female Voice for Windows
     engine.say(audio)
     engine.runAndWait()
 
