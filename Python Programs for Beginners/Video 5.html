@@ -1,4 +1,4 @@
-<!-- Video 4 Page -->
+<!-- Video 5 Page -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -22,9 +22,11 @@
     <header class="text-gray-700 body-font">
         <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
             <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full"
+                    viewBox="0 0 24 24">
                     <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-                  </svg>
+                </svg>
                 <span class="ml-3 text-xl">ProgrammingWithPrameya</span>
             </a>
             <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
@@ -32,32 +34,36 @@
                 <a
                     href="https://docs.google.com/forms/d/e/1FAIpQLSdu4P3K43N0MKTB3zKeb8CfzugCLcExTFWzj5EFrPaEIUOEaQ/viewform?usp=sf_link"><strong>Contact
                         Me &nbsp;&nbsp;&nbsp;</strong></a>
-                <a href="/ProgrammingWithPrameya/videos.html" class="mr-5 hover:text-gray-900"><strong>Browse Video Tutorials</strong></a>
+                <a href="/ProgrammingWithPrameya/videos.html" class="mr-5 hover:text-gray-900"><strong>Browse Video
+                        Tutorials</strong></a>
             </nav>
             </button>
         </div>
     </header>
     <div>
-        <iframe width="1350" height="620" src="https://www.youtube.com/embed/Y79ZYwjPezc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="1350" height="620" src="https://www.youtube.com/embed/n8Ajq0txqJo" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
     </div><br>
     <hr>
 
     <font size="7"><strong>
-            <p align="Middle">Python Project 4</p>
+            <p align="Middle">Python Project 5</p>
         </strong></font>
     <strong>
         <font size="6">
-            <h5>Google Search using Python</h5>
+            <h5>Making Python Speak</h5>
         </font>
     </strong>
     <font size="5">
-        <p><strong>Statement: </strong>We will write a Python Program which is capable of performing a Google Search for us!</p>
+        <p><strong>Statement: </strong>We have to write a program which can make Python speak. We will break the code
+            into a function so that we can call it whenever and wherever we want to.</p>
     </font>
-    <font color="Red" size="5"><u>Note: Python Packages can be used!</u></font><br><br>
+    <font color="Red" size="5"><u>Note: We will use pyttsx3 module for this Project</u></font><br><br>
     <font size="5">To download source code and other material click on the button given below!</font>
 
     <div>
-        <a href="https://drive.google.com/drive/folders/1mbklbIRHgZakhammAMmq6TR5cuekO6FM?usp=sharing"><button
+        <a href="https://drive.google.com/drive/u/1/folders/14fD5Z3Y8qgyp9GsdZtKtogqkqU21UBqT?usp=sharing"><button
                 class="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Materials</button></a>
     </div><br>
 
@@ -69,17 +75,24 @@
     </font>
     <font size="5">
         <pre class="language-python"><code>
-import webbrowser
+import pyttsx3 # --> pip install pyttsx3
 
-query = input("Enter what you want to search in google\n")
-url = "https://www.google.com/search?q=" + query
-webbrowser.open(url)
+def speak(audio): # --> Our main function
+    engine = pyttsx3.init("sapi5")
+    voices = engine.getProperty("voices")
+    engine.setProperty("voice", voices[0].id) # --> Male Voice for Windows
+    # engine.setProperty("voice", voices[0].id) # --> Female Voice for Windows
+    engine.say(audio)
+    engine.runAndWait()
+
+string = input("Enter what do you want to be told py Python\n")
+speak(string)
         </code></pre>
     </font>
 
 
     <div>
-        <a href="/ProgrammingWithPrameya/Python Programs for Beginners/Video 5.html"><button
+        <a><button
                 class="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Next</button></a>
     </div>
 </body>
