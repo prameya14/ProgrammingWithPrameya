@@ -10,7 +10,7 @@
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/ProgrammingWithPrameya/prism.css">
     <script src="/ProgrammingWithPrameya/prism.js"></script>
-    <title>Project 5</title>
+    <title>Project 6</title>
     <style>
         .Button-Next {
             background-color: rgb(149, 149, 221);
@@ -41,29 +41,26 @@
         </div>
     </header>
     <div>
-        <iframe width="1350" height="620" src="https://www.youtube.com/embed/n8Ajq0txqJo" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
+        <iframe width="1350" height="620" src="https://www.youtube.com/embed/iJOSiSVwkTI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div><br>
     <hr>
 
     <font size="7"><strong>
-            <p align="Middle">Python Project 5</p>
+            <p align="Middle">Python Project 6</p>
         </strong></font>
     <strong>
         <font size="6">
-            <h5>Making Python Speak</h5>
+            <h5>Sending Automatic E-Mails using Python</h5>
         </font>
     </strong>
     <font size="5">
-        <p><strong>Statement: </strong>We have to write a program which can make Python speak. We will break the code
-            into a function so that we can call it whenever and wherever we want to.</p>
+        <p><strong>Statement: </strong>We have to write a Python Program which is capable of sending a E-Mail to the e-mail address we provide it to. We will break the code into a function so that we can call the function whenever and wherever we want it to!</p>
     </font>
-    <font color="Red" size="5"><u>Note: We will use pyttsx3 module for this Project</u></font><br><br>
+    <font color="Red" size="5"><u>Note: We will use a Python Package called "smtplib"</u></font><br><br>
     <font size="5">To download source code and other material click on the button given below!</font>
 
     <div>
-        <a href="https://drive.google.com/drive/u/1/folders/14fD5Z3Y8qgyp9GsdZtKtogqkqU21UBqT?usp=sharing"><button
+        <a href="https://drive.google.com/drive/u/1/folders/1yYCXLfS5dcyfGNstYC_XJIaDrGFIY7cT"><button
                 class="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Materials</button></a>
     </div><br>
 
@@ -75,24 +72,31 @@
     </font>
     <font size="5">
         <pre class="language-python"><code>
-import pyttsx3 # --> pip install pyttsx3
+import smtplib # --> Built In Module/Package
 
-def speak(audio): # --> Our main function
-    engine = pyttsx3.init("sapi5")
-    voices = engine.getProperty("voices")
-    engine.setProperty("voice", voices[0].id) # --> Male Voice for Windows
-    # engine.setProperty("voice", voices[1].id) # --> Female Voice for Windows
-    engine.say(audio)
-    engine.runAndWait()
+def send_email(to, content):
+    USER_NAME = "samplepython14@gmail.com" # --> Enter your email id here
+    USER_PSWD = "sample@14" # --> Enter your password here
+    server = smtplib.SMTP("smtp.gmail.com", 587)
+    server.ehlo()
+    server.starttls()
+    server.login(USER_NAME, USER_PSWD)
+    server.sendmail(USER_NAME, to, content)
+    server.close
 
-string = input("Enter what do you want to be told py Python\n")
-speak(string)
+to = input("Enter the email id of the person you want to send an email to\n")
+content = input("Enter what you want to write in the email\n")
+try:
+    send_email(to, content)
+    print("Email has been sent succesfully!")
+except Exception as e:
+    print(f"An error ocurred which is printed below!\n{e}")
         </code></pre>
     </font>
 
 
     <div>
-        <a href="/ProgrammingWithPrameya/Python Programs for Beginners/Video 6.html"><button
+        <a><button
                 class="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Next</button></a>
     </div>
 </body>
