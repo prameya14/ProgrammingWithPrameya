@@ -1,7 +1,17 @@
-.middle {
+.table {
+    background: linear-gradient(rgb(13, 102, 129), rgb(137, 181, 187));
     margin: auto;
 }
 
-body {
-    background: linear-gradient(rgb(86, 255, 86), green);
+.courseContent {
+    margin: auto;
+    font-size: large;
+}
+
+.Button-Next {
+    background-color: rgb(149, 149, 221);
+}
+
+.click {
+    color: rgb(0, 0, 0);
 }
