@@ -49,23 +49,23 @@
     <hr>
 
     <font size="7"><strong>
-            <p align="Middle">Python Project 6</p>
+            <p align="Middle">Python Project 7</p>
         </strong></font>
     <strong>
         <font size="6">
-            <h5>Sending Automatic E-Mails using Python</h5>
+            <h5>Automatic Password Generator using Python</h5>
         </font>
     </strong>
     <font size="5">
-        <p><strong>Statement: </strong>We have to write a Python Program which is capable of sending a E-Mail to the
-            e-mail address we provide it to. We will break the code into a function so that we can call the function
-            whenever and wherever we want it to!</p>
+        <p><strong>Statement: </strong>We have to write a program which can automatically generate strong passwords for
+            us. The program must be capable of taking the lenght of the password as input from the user and then return
+            a password of the same lenght.</p>
     </font>
-    <font color="Red" size="5"><u>Note: We will use a Python Package called "smtplib"</u></font><br><br>
+    <font color="Red" size="5"><u>Note: We will use a Python Package called "string"</u></font><br><br>
     <font size="5">To download source code and other material click on the button given below!</font>
 
     <div>
-        <a href="https://drive.google.com/drive/u/1/folders/1yYCXLfS5dcyfGNstYC_XJIaDrGFIY7cT"><button
+        <a href="https://drive.google.com/drive/folders/1kKErGermi4-OoQhEryzL-ZrdjUb764At?usp=sharing"><button
                 class="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Materials</button></a>
     </div><br>
 
@@ -77,25 +77,43 @@
     </font>
     <font size="5">
         <pre class="language-python"><code>
-import smtplib # --> Built In Module/Package
+# Programme Topic: Automatic Password Generator using Python
 
-def send_email(to, content):
-    USER_NAME = "#################" # --> Enter your email id here
-    USER_PSWD = "#################" # --> Enter your password here
-    server = smtplib.SMTP("smtp.gmail.com", 587)
-    server.ehlo()
-    server.starttls()
-    server.login(USER_NAME, USER_PSWD)
-    server.sendmail(USER_NAME, to, content)
-    server.close
+import string
+import random
 
-to = input("Enter the email id of the person you want to send an email to\n")
-content = input("Enter what you want to write in the email\n")
-try:
-    send_email(to, content)
-    print("Email has been sent succesfully!")
-except Exception as e:
-    print(f"An error ocurred which is printed below!\n{e}")
+if __name__ == '__main__':
+    s1 = string.ascii_lowercase
+    # print(s1)
+
+    s2 = string.ascii_uppercase
+    # print(s2)
+
+    s3 = string.digits
+    # print(s3)
+
+    s4 = string.punctuation
+    # print(s4)
+
+    try:
+        pass_len = int(input("Enter the length for your password: "))
+
+        s = []
+        s.extend(list(s1))
+        s.extend(list(s2))
+        s.extend(list(s3))
+        s.extend(list(s4))
+        # print(s)
+        # print(len(s))
+
+        random.shuffle(s)
+        # print(s)
+
+        password = "".join(s[0:pass_len])
+        print(f"Your password is below: \n{password}")
+    except Exception as e:
+        print("Sorry you didn't enter a number!!!")
+            
         </code></pre>
     </font>
 
@@ -147,9 +165,10 @@ except Exception as e:
     </div>
 
     <div>
-        <a href="/ProgrammingWithPrameya/Python Programs for Beginners/Video 7.html"><button
+        <a><button
                 class="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Next</button></a>
     </div>
 </body>
 <link rel="stylesheet" href="/ProgrammingWithPrameya/style.css">
+
 </html>
